@@ -13,6 +13,7 @@
       - virtualbox
       - virtualbox-extension-pack
       - docker 
+      - scroll-reverser
     brew_packages:
       - bash-completion
       - git
