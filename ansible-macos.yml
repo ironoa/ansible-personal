@@ -13,7 +13,7 @@
       - virtualbox
       - virtualbox-extension-pack
       - docker 
-      - scroll-reverser
+    #  - scroll-reverser
     brew_packages:
       - bash-completion
       - git
@@ -25,10 +25,16 @@
       - ruby-build
       - go
       - rustup   
-      - wget   
+      - wget
+      - nvm
+      - yarn
+      - circleci   
       - docker-compose
       - kubectl
       - minikube  
+      - kind
+      - helm
+      - helmfile
       - terraform
       - terraform-inventory
       - terraform-provisioner-ansible
