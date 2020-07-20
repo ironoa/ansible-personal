@@ -1,0 +1,9 @@
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Install packages
+    homebrew: 
+      name: "{{item}}"
+      state: present
+    with_items:
+      - visual-studio-code
