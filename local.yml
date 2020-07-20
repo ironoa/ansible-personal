@@ -1,7 +1,0 @@
-- hosts: localhost
-  become: true
-  tasks:
-  - name: Install packages
-    homebrew: 
-      name: ['visual-studio-code']
-      state: present
