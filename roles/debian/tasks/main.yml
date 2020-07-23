@@ -1,0 +1,13 @@
+---
+- name: Installing Dependencies
+  import_tasks: pre_tasks.yml
+- name: Installing apt Packages
+  apt:
+    pkg: "{{ packages }}"
+    state: present
+    update_cache: true
+# - name: Installing snap Packages
+#   snap:
+#     name: "{{ snap_packages }}"
+#     state: present
+#     classic: yes
