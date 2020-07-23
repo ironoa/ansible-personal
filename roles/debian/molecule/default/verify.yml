@@ -1,0 +1,18 @@
+---
+- name: Verify
+  hosts: all
+  tasks:
+  - name: Check packages status
+    package:
+      pkg: 
+        - docker-ce
+        - git-all
+        - jq
+        - python
+      state: present
+    check_mode: yes
+    register: pkgs_status
+  - name: Assert Packages are installed
+    assert:
+      that: 
+        - not pkgs_status.changed

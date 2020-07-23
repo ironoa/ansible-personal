@@ -1,0 +1,8 @@
+---
+packages:
+  - docker-ce
+  - git-all
+  - jq
+  - python
+#snap_packages:
+#  - kubectl  

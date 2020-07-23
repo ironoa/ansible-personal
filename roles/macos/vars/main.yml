@@ -1,0 +1,43 @@
+---
+brew_cask_packages:
+  - visual-studio-code
+#  - google-chrome
+#  - google-drive
+  - iterm2
+#  - keepassxc
+  - virtualbox
+  - virtualbox-extension-pack
+  - docker 
+#  - scroll-reverser
+brew_packages:
+  - bash-completion
+  - git
+  - jq
+  - openssl
+  - cmake
+  - llvm
+  - pyenv
+  - python
+  - rbenv
+  - ruby-build
+  - go
+  - rustup   
+  - wget
+  - nvm
+  - yarn
+  - circleci 
+  # - molecule  # better to install it via pip in a venv
+  - docker-compose
+  - kubectl
+  - minikube  
+  - kind
+  - kubectx
+  - helm
+  - helmfile
+  - terraform
+  - terraform-inventory
+  - terraform-provisioner-ansible
+# python_modules:
+#   - configparser
+#   - pylint
+#   - virtualenv  

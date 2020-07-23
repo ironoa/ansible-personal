@@ -1,0 +1,10 @@
+---
+- name: Install Packages
+  hosts: localhost
+  tasks:
+    - include_role:
+        name: macos
+      when: ansible_facts['os_family']|lower == 'darwin'
+    - include_role:
+        name: debian
+      when: ansible_facts['os_family']|lower == 'debian'      

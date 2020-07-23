@@ -1,0 +1,37 @@
+---
+- name: Homebrew Check
+  import_tasks: pre_tasks.yml
+
+- name: Updating Homebrew
+  homebrew:
+    update_homebrew: false
+  when: homebrew_check.stat.exists
+
+- name: Upgrading Homebrew Packages
+  homebrew:
+    upgrade_all: "{{ upgrade_homebrew_packages }}"
+  register: result
+  until: result is successful
+  when: homebrew_check.stat.exists
+
+- name: Installing Homebrew Cask Packages
+  homebrew_cask:
+    name: "{{ brew_cask_packages }}"
+    state: present
+  register: result
+  until: result is successful
+  when: homebrew_check.stat.exists
+
+- name: Installing Homebrew Packages
+  homebrew:
+    name: "{{ brew_packages }}"
+    state: present
+  register: result
+  until: result is successful
+  when: homebrew_check.stat.exists
+  
+# - name: Installing Python Modules
+#   pip:
+#     name: "{{ item }}"
+#     state: present
+#   with_items: '{{ python_modules }}'
