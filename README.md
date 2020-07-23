@@ -1,4 +1,4 @@
-# Ansible Environment Setup
+# Ansible Development Environment Setup
 
 ## Description
 An easy way to automatize the initial setup and the package management of your developement machine, either it is macos or ubuntu.
