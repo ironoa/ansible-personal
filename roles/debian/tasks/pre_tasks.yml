@@ -8,14 +8,38 @@
       - gnupg-agent
       - software-properties-common
       - snapd
+      - build-essential
+      - libssl-dev
+      - zlib1g-dev
     state: present
     update_cache: true
+#- apt_repository:
+#    repo: ppa:ansible/ansible   
 - name: Add Docker GPG apt Key
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present 
 - name: Add Docker Repository
   apt_repository:
-    repo: deb https://download.docker.com/linux/ubuntu focal stable
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
     state: present
-
+- name: Add Google Chrome GPG apt Key
+  apt_key:
+    url: https://dl.google.com/linux/linux_signing_key.pub
+    state: present 
+- name: Add Google Chrome Repository
+  apt_repository:
+    repo: deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
+    state: present
+- name: Add Virtualbox apt Key
+  apt_key:
+    url: https://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc
+    state: present         
+- name: Add Virtualbox apt Key 2
+  apt_key:
+    url: https://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc
+    state: present    
+- name: Add Virtualbox Repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian focal contrib
+    state: present 

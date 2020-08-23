@@ -14,7 +14,7 @@ An easy way to automatize the initial setup and the package management of your d
 
 ```
 # clone first the repository, then:
-ansible-playbook main.yml -v  
+ansible-playbook main.yml -v --ask-become-pass
 ```
 or    
 ```

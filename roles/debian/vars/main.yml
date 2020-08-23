@@ -1,8 +1,13 @@
 ---
-packages:
+apt_packages:
+  - google-chrome-stable
   - docker-ce
+#  - virtualbox-6.1 FIXME
   - git-all
   - jq
-  - python
-#snap_packages:
-#  - kubectl  
+  - cmake
+#  - python
+snap_packages:
+#  - kubectl
+  - code  
+  - lepton
