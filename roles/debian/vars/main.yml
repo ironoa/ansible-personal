@@ -11,3 +11,4 @@ snap_packages:
 #  - kubectl
   - code  
   - lepton
+  - xmind
